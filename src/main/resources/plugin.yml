@@ -1,0 +1,6 @@
+  name: MelonOS
+  main: MelonOS
+  version: ${version}
+  author: Meloni
+  description: "MelonOS Minecraft Plugin"
+  prefix: MelonOS
