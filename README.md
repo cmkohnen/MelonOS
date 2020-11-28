@@ -1,2 +1,2 @@
 # MelonOS
-This is aiming to bee an universal minecraft plugin like Essentials designed for personal use.
+This is aiming to be an universal Minecraft plugin like Essentials designed for personal use.
