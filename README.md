@@ -5,3 +5,4 @@
 
 
 This is aiming to be an universal Minecraft plugin like Essentials designed for personal use.
+I do not plan to implement every method there is but only them I need in my personal server configuration.
