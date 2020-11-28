@@ -4,3 +4,11 @@
   author: Meloni
   description: "MelonOS Minecraft Plugin"
   prefix: MelonOS
+
+  commands:
+    melonos:
+      description: "Main MelonOS command"
+      usage: "/melonos"
+    test:
+      description: "Displays Test"
+      usage: "/test"
