@@ -1,0 +1,108 @@
+name: MelonOS
+main: me.meloni.melonos.MelonOS
+version: ${version}
+author: Meloni
+description: "MelonOS Minecraft Plugin"
+prefix: MelonOS
+
+commands:
+  melonos:
+    description: "Main MelonOS command"
+    usage: "/melonos"
+  say:
+    description: "say something"
+    usage: "/say [Message]"
+  broadcast:
+    description: "broadcast something"
+    usage: "/broadcast [Message]"
+    permission: melonos.command.broadcast
+  sudo:
+    description: "force others into saying something"
+    usage: "/sudo [Player]/c [Message]"
+    permission: melonos.command.sudo
+  gamemode:
+    description: "changes the gamemode"
+    usage: "/gamemode"
+    permission: melonos.command.gamemode
+    aliases:
+      - gm
+
+permissions:
+  melonos.*:
+    description: "grants access to ALL MelonOS commands and features"
+    default: false
+    children:
+      melonos.command.*: true
+      melonos.admin.*: true
+
+  melonos.command.*:
+    description: "grants access to all commands without administration"
+    children:
+      melonos.command.broadcast: true
+      melonos.command.sudo.console: true
+      melonos.command.gamemode.*: true
+
+
+  melonos.command.broadcast:
+    default: false
+  melonos.command.sudo:
+    default: false
+  melonos.command.sudo.console:
+    default: false
+    children:
+      melonos.command.sudo: true
+  melonos.command.gamemode:
+    default: false
+  melonos.command.gamemode.*:
+    default: false
+    children:
+      melonos.command.gamemode.self.*: true
+      melonos.command.gamemode.other.*: true
+  melonos.command.gamemode.self:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.other:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.self.*:
+    default: false
+    children:
+      melonos.command.gamemode.*: true
+  melonos.command.gamemode.other.*:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.self.survival:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.self.creative:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.self.adventure:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.self.spectator:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.other.survival:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.other.creative:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.other.adventure:
+    default: false
+    children:
+      melonos.command.gamemode: true
+  melonos.command.gamemode.other.spectator:
+    default: false
+    children:
+      melonos.command.gamemode: true

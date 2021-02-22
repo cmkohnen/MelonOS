@@ -1,5 +1,5 @@
   name: MelonOS
-  main: MelonOS
+  main: me.meloni.melonos.MelonOS
   version: ${version}
   author: Meloni
   description: "MelonOS Minecraft Plugin"
@@ -9,6 +9,24 @@
     melonos:
       description: "Main MelonOS command"
       usage: "/melonos"
-    test:
-      description: "Displays Test"
-      usage: "/test"
+    say:
+      description: "say something"
+      usage: "/say [Message]"
+    broadcast:
+      description: "broadcast something"
+      usage: "/broadcast [Message]"
+      permission: melonos.command.broadcast
+    sudo:
+      description: "force others into saying something"
+      usage: "/sudo [Player]/c [Message]"
+      permission: melonos.command.sudo
+    gamemode:
+      description: "changes the gamemode"
+      usage: "/gamemode"
+      permission: melonos.command.gamemode
+      aliases:
+        - gm
+    kill:
+      permission: melonos.command.kill
+    kick:
+      permission: melonos.command.kick

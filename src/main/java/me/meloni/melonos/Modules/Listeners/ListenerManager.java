@@ -1,6 +1,6 @@
-import Listeners.Listener;
-import Listeners.PlayerListener;
-import org.bukkit.plugin.PluginManager;
+package me.meloni.melonos.Modules.Listeners;
+
+import me.meloni.melonos.MelonOS;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +20,7 @@ public class ListenerManager {
         List<Listener> listeners = new ArrayList<>();
 
         listeners.add(new PlayerListener());
+        listeners.add(new CommandListener());
 
         return listeners;
     }
